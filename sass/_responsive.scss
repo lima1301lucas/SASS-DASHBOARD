@@ -1,0 +1,52 @@
+@media screen and(max-width: 968px){
+    .dashboard-container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "total1 total2"
+            "total3 total4"
+            "detail detail"
+            "customer customer";
+    }
+}
+
+@media screen and(max-width: 480px){
+    .profile-name{
+        display: none;
+    }
+
+    .sidebar{
+        display: none;
+    }
+
+    main{
+        padding: 6rem 2rem 2rem 2rem;
+    }
+
+    #toggle:checked ~ .sidebar{
+        width: 200px;
+        display: block;
+    }
+
+    #toggle:checked ~ .sidebar .sidebar-menu > p{
+        display: block;
+    }
+
+    #toggle:checked ~ main{
+        padding: 6rem 2rem 2rem 2rem;
+    }
+
+    .dashboard-container{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "total1"
+            "total2"
+            "total3"
+            "total4"
+            "detail"
+            "customer";
+    }
+
+    .detail table{
+        font-size: 0.9rem;
+    }
+}
